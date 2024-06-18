@@ -1,10 +1,10 @@
-dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+dictionary = ["bElow","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 def substrings(string, dict)
     result = Hash.new(0)
     for word in dict
-        if string.include?(word)
-            result[word] += 1
+        if string.downcase.include?(word.downcase)
+            result[word.downcase] += 1
         end
     end
     result
