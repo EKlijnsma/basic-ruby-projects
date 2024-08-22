@@ -1,6 +1,8 @@
-def caesar_cipher(string, n)
+def caesar_cipher(string, shift)
   # convert to list of character values
   original_char_values = string.split('').map { |c| c.ord }
+  # convert shift to a corresponding value between 1-26
+  n = shift % 26
   # if a-z or A-Z -> shift
   new_char_values = original_char_values.map do |c|
     if c.between?('a'.ord, 'z'.ord - n) || c.between?('A'.ord, 'Z'.ord - n)
